@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/<github user name>/add
+go_import_path: github.com/AlexMikhalev/add
 
 go:
   - 1.9
@@ -10,7 +10,7 @@ install:
 - sudo mv reco /usr/local/bin
 
 script:
-  - go test github.com/<github user name>/add
-  - mkdir -p kernels/add/vendor/github.com/<github user name>/add
-  - cp add.go kernels/add/vendor/github.com/<github user name>/add/add.go
+  - go test github.com/AlexMikhalev/add
+  - mkdir -p kernels/add/vendor/github.com/AlexMikhalev/add
+  - cp add.go kernels/add/vendor/github.com/AlexMikhalev/add/add.go
   - cd kernels/add && reco check
